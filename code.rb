@@ -19,6 +19,6 @@ $jsonArray = Array.new
 initial_date = Date.new(2009,8,7)
 end_date = Date.new(2011,11,17)
 values_array = get_values(initial_date,end_date)
-print '\nMaior valor foi: R$' +  values_array.max.to_s + ' no dia: ' + $jsonArray(values_array.each_with_index.max[1]).to_s
-print '\nMenor valor foi: R$' + values_array.min.to_s + ' no dia: '  + $jsonArray(values_array.each_with_index.min[1]).to_s
+print '\nMaior valor foi: R$' +  values_array.max.to_s + ' no dia: ' + $jsonArray[values_array.each_with_index.max[1]].to_s
+print '\nMenor valor foi: R$' + values_array.min.to_s + ' no dia: '  + $jsonArray[values_array.each_with_index.min[1]].to_s
 print '\nA Média é: R$' + (values_array.inject{ |sum, el| sum + el }.to_f / values_array.size).to_s
